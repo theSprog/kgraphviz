@@ -7,6 +7,8 @@ Inspired by the Python `graphviz` package, it brings expressive syntax and intui
 
 ---
 
+
+
 ## ✨ Features
 
 - 🧩 Header-only, dependency-free, C++11 compatible
@@ -18,6 +20,8 @@ Inspired by the Python `graphviz` package, it brings expressive syntax and intui
 - ⚙️ Cross-platform: Linux, macOS, Windows (including WSL)
 
 ---
+
+
 
 ## 🚀 Quickstart
 
@@ -48,6 +52,8 @@ You’ll get a nicely formatted SVG image rendered by Graphviz.
 
 ---
 
+
+
 ## 📦 API Overview
 
 ```cpp
@@ -69,6 +75,8 @@ Attributes are passed via `std::map<std::string, std::string>` (alias: `AttrMap`
 
 ---
 
+
+
 ## 🛠️ Installation
 
 `kgraphviz` is **header-only** — just add it to your project and include:
@@ -84,6 +92,8 @@ Make sure Graphviz (`dot`) is available in your system PATH.
 - On Windows: install Graphviz and ensure `dot.exe` is in your PATH
 
 ---
+
+
 
 ## 📁 File Structure
 
@@ -108,6 +118,8 @@ All public headers are under include/kgraphviz/ — just add -Iinclude to your c
 
 ---
 
+
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.
@@ -115,7 +127,40 @@ Contributions welcome via pull requests or issues!
 
 ---
 
+
+
 ## 💡 Acknowledgements
 
 Inspired by the elegant interface of [Python’s graphviz](https://github.com/xflr6/graphviz).
 Built with ❤️ for C++11 minimalism and clean tooling.
+
+---
+
+
+
+## 🎁 Pacman Dependency Graph Easter Egg (Arch Only)
+
+If you're using Arch Linux, you're in for a treat!
+
+We’ve included a special example: **`pacman_deps_graph.cpp`** — a small program that uses `pacman -Q` and `pacman -Qi` to analyze all installed packages on your system, and then uses `kgraphviz` to generate a complete dependency graph.
+
+
+
+🛠️ How to use:
+
+```bash
+g++ -std=c++11 -Iinclude -O2 pacman_deps_graph.cpp -o pacman_deps_graph
+./pacman_deps_graph
+# by the way, it may takes five or ten minutes
+```
+
+This will generate a file called:
+
+```
+pacman_deps.svg
+```
+
+...a visual representation of **your system's entire package dependency graph**, have fun!
+
+> Note: This only works on Arch-based systems with pacman installed. On other distributions, the program will likely fail due to `pacman` not being found.
+

@@ -5,9 +5,15 @@ namespace kgraphviz {
 
 const static std::string DefaultFormat = "svg";
 
+#ifdef _WIN32
+const static std::string DefaultEngine = "dot.exe";
+#else
+const static std::string DefaultEngine = "dot";
+#endif
+
 struct RenderOptions {
-    std::string engine = "dot"; // layout engine
-    std::string format = "";    // 默认可以从 output filename 中推断出来
+    std::string engine = DefaultEngine; // layout engine, default "dot"
+    std::string format = "";            // 默认可以从 output filename 中推断出来
 
     // 保持 renderer / formatter 的默认值为空字符串 "" 是合理且安全的设计。
     std::string renderer;  // e.g., "cairo"

@@ -79,9 +79,9 @@ Attributes are passed via `std::map<std::string, std::string>` (alias: `AttrMap`
 
 Make sure Graphviz (`dot`) is available in your system PATH.
 
-> On Debian/Ubuntu: `sudo apt install graphviz`
-> On macOS: `brew install graphviz`
-> On Windows: install Graphviz and ensure `dot.exe` is in your PATH
+- On Debian/Ubuntu: `sudo apt install graphviz`
+- On macOS: `brew install graphviz`
+- On Windows: install Graphviz and ensure `dot.exe` is in your PATH
 
 ---
 

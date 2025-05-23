@@ -82,7 +82,7 @@ Attributes are passed via `std::map<std::string, std::string>` (alias: `AttrMap`
 `kgraphviz` is **header-only** — just add it to your project and include:
 
 ```cpp
-#include <kgraphviz/graph.hpp>
+#include "kgraphviz/graph.hpp"
 ```
 
 Make sure Graphviz (`dot`) is available in your system PATH.
